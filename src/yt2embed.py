@@ -1,4 +1,3 @@
-
 # ----------------------------------------------
 # * imports : 
 # ----------------------------------------------
@@ -47,7 +46,11 @@ def get_id(string):
         return "test"
     if string.startswith("https://youtu.be/"):
         return r[3]
-    if string.startswith("https://www.youtube.com"):
+    if string.startswith("https://www.youtube.com/live"):
+        r =r[4]
+        r = r[0:11]
+        return r 
+    if string.startswith("https://www.youtube.com/watch?v="):
         r =r[3]
         r = r[8:19]
         return r 

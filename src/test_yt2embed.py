@@ -2,7 +2,7 @@
 # * import block :
 import unittest
 
-from main import *
+from yt2embed import *
 
 # ----------------------------------------------
 # * class Test_Init : 
@@ -30,7 +30,6 @@ class Test_Init(unittest.TestCase):
         # https://www.youtube.com/live/_r6YqGDSmbo?feature=share
         t = get_id("https://www.youtube.com/live/_r6YqGDSmbo?feature=share")
         self.assertEqual(t, "_r6YqGDSmbo")
-        #
         t = get_id("https://www.youtube.com/watch?v=MD3OHN3luAA&pp=ygVv0KfQtdC8INC60L7QvdGH0LDRjtGC0YHRjyDQtNC40LrRgtCw0YLRg9GA0Ysg0JjQvdGC0LXRgNCy0YzRjiDQn9Cw0LLQu9GDINCa0LDQvdGL0LPQuNC90YMg0LrQsNC90LDQuyBwcm9zbGVkdWV0")
         self.assertEqual(t, "MD3OHN3luAA")
         t = get_id("no test")
